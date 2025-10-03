@@ -29,7 +29,7 @@ def home_page():
 
 @app.route('/')
 def home():
-    return "Welcome to the BBC News Text Classification API!"
+    return "Text Classification API!"
 
 @app.route('/predict', methods=['POST'])
 def predict():

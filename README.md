@@ -44,5 +44,17 @@ text = "The government announces new economic policies."
 print(predict_category(logReg, text, vectorizer, encoder))
 # Output: "business"
 ```
+## Flask API
+app.py implements a simple Flask API to serve the trained text classification models (Logistic Regression and Naive Bayes).
+
+- /home → Serves the front-end HTML page for inputting text and selecting a model.
+
+- /predict → Accepts POST requests with text and model fields and returns the predicted category.
+
+Models, TF-IDF vectorizer, and label encoder are loaded from pickle files.
+Note: Assistance was sought to finalize the integration of the Flask API with the front-end HTML.
+
+## Conclusion
+Both models performed exceptionally well with over 97% accuracy.
 Logistic Regression showed slightly better overall performance.
 Confusion matrices and classification reports confirm strong results across all categories.

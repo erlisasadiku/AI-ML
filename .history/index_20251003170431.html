@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>AI/ML - Text Classification</title>
+</head>
+<body>
+    <h2>Text Classification of BBC news articles!</h2>
+
+    <label for="text">Enter your text:</label><br><br>
+    <textarea id="text" rows="4" cols="50"></textarea><br><br>
+
+    <label for="model">Choose a model:</label>
+    <select id="model">
+        <option value="logistic">Logistic Regression</option>
+        <option value="naive_bayes">Naive Bayes</option>
+    </select><br><br>
+
+    <button onclick="predict()">Predict</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function predict() {
+            const text = document.getElementById('text').value;
+            const model = document.getElementById('model').value;
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: text, model: model })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = 'Predicted category: ' + data.predicted_category;
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = 'Error: ' + error;
+            });
+        }
+    </script>
+</body>
+</html>
+
