@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify, send_from_directory
 import pickle
 
 # Load models and objects
-with open('logReg.pkl', 'rb') as f:
-    logReg = pickle.load(f)
+with open('LRegression.pkl', 'rb') as f:
+    LRegression = pickle.load(f)
 
 with open('nBayes.pkl', 'rb') as f:
     nBayes = pickle.load(f)
@@ -42,7 +42,7 @@ def predict():
     model_name = data['model'].lower()
 
     if model_name == 'logistic':
-        model = logReg
+        model = LRegression
     elif model_name == 'naive_bayes':
         model = nBayes
     else:
