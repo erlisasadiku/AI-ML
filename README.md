@@ -28,9 +28,9 @@ Is a public dataset of BBC News articles, contains 2225 labeled articles
 ## Model Training and Evaluation
 - Logistic Regression (max_iter=1000)
 - Naive Bayes
-- Both models were trained on 75% of the dataset and evaluated on 25%.
+- Both models were trained on 75% of the dataset and evaluated on 25%
 - Evaluation metrics: accuracy, precision, recall, F1-score
-- Confusion matrices were plotted for both models.
+- Confusion matrices were plotted for both models
 
 ## Results
 | Model                | Accuracy |  
