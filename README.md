@@ -2,7 +2,6 @@
 
 This project implements a text classification pipeline to categorize BBC news articles into five categories:
 tech, business, sport, entertainment and politics. The aim is to compare the performance of Logistic Regression and Naive Bayes models for text classification.
-The link to the dataset used: https://github.com/codehax41/BBC-Text-Classification/blob/master/bbc-text.csv
 
 ## Dataset
 The link to the dataset used: https://github.com/codehax41/BBC-Text-Classification/blob/master/bbc-text.csv
@@ -62,3 +61,4 @@ Both models performed exceptionally well with over 97% accuracy.
 Logistic Regression showed slightly better overall performance.
 
 Confusion matrices and classification reports confirm strong results across all categories.
+
